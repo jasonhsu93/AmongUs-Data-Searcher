@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Among Us Database - Players</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- nav bar -->
+    <div class="navbar">
+        <div class="logo-container">
+            <img src="./amongus_icon.png" alt="Among Us Icon">
+            <span class="logo-text">Among Us <span class="database-text">Database</span></span>
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="player.html">Player</a></li>
+            <li><a href="task.html">Task</a></li>
+            <li><a href="chat.html">Chat</a></li>
+            <li><a href="kills.html">Kills</a></li>
+        </ul>
+    </div>
+
+    <div class="content">
+        <h1>Player Table</h1>
+
+        <table id="playerTable">
+            <thead>
+                <tr>
+                    <th>Color</th>
+                    <th>Player Name</th>
+                    <th>Role</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+        <button id="fetchPlayers">Fetch Players</button>
+
+        <h2>Insert a Player</h2>
+        <form id="insertPlayerForm">
+            <label>Color:</label>
+            <input type="text" id="playerColor" required><br>
+            <label>Player Name:</label>
+            <input type="text" id="playerName" required><br>
+            <label>Role:</label>
+            <select id="playerRole">
+                <option value="Crewmate">Crewmate</option>
+                <option value="Impostor">Impostor</option>
+            </select><br>
+            <button type="submit">Insert Player</button>
+        </form>
+        <div id="insertPlayerResult"></div>
+
+        <h2>Update Player</h2>
+        <form id="updatePlayerForm">
+            <label>Select Player Color:</label>
+            <select id="updatePlayerColor"></select><br>
+            <label>New Player Name:</label>
+            <input type="text" id="updatePlayerName" placeholder="Leave blank to keep current name"><br>
+            <label>New Role:</label>
+            <select id="updatePlayerRole">
+                <option value="">(No Change)</option>
+                <option value="Crewmate">Crewmate</option>
+                <option value="Impostor">Impostor</option>
+            </select><br>
+            <button type="submit">Update Player</button>
+        </form>
+        <div id="updatePlayerResult"></div>
+
+        <h2>Delete a Player</h2>
+        <form id="deletePlayerForm">
+            <label>Color:</label>
+            <input type="text" id="deletePlayerColor" required><br>
+            <button type="submit">Delete Player</button>
+        </form>
+        <div id="deletePlayerResult"></div>
+    </div>
+
+    <script src="player.js"></script>
+</body>
+<footer><p>Among Us Database</p></footer>
+</html>

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Among Us Database Chat</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- nav bar -->
+    <div class="navbar">
+        <div class="logo-container">
+            <img src="./amongus_icon.png" alt="Among Us Icon">
+            <span class="logo-text">Among Us <span class="database-text">Database</span></span>
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="player.html">Player</a></li>
+            <li><a href="task.html">Task</a></li>
+            <li><a href="chat.html">Chat</a></li>
+            <li><a href="kills.html">Kills</a></li>
+        </ul>
+    </div>
+
+    <div class="content">
+        <h1>Chat</h1>
+        <h2>Message Results</h2>
+        <table id="selectChatTable" border="1">
+            <thead>
+                <tr>
+                    <th>Chat ID</th>
+                    <th>Message</th>
+                    <th>Timestamp</th>
+                    <th>Player Color</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- rendered here -->
+            </tbody>
+        </table>
+
+        <h2>Select Messages from Chat</h2>
+        <form id="selectChatForm">
+
+            <label for="chatID">Chat ID:</label>
+            <input type="number" id="chatID" placeholder="Enter Chat ID (optional)">
+            <label for="chatIDLogic">Use OR:</label>
+            <input type="checkbox" id="chatIDLogic">
+            <br><br>
+
+            <label for="messageContent">Message:</label>
+            <input type="text" id="messageContent" placeholder="Enter part of the message (optional)">
+            <label for="messageLogic">Use OR:</label>
+            <input type="checkbox" id="messageLogic">
+            <br><br>
+
+            <label for="timestamp">Timestamp:</label>
+            <input type="datetime-local" id="timestamp" placeholder="Enter Timestamp (optional)">
+            <label for="timestampLogic">Use OR:</label>
+            <input type="checkbox" id="timestampLogic">
+            <br><br>
+
+            <label for="color">Player Color:</label>
+            <input type="text" id="color" placeholder="Enter Player Color (optional)">
+            <label for="colorLogic">Use OR:</label>
+            <input type="checkbox" id="colorLogic">
+            <br><br>
+
+            <button type="submit">Select Messages</button>
+            <div id="selectChatResultMessage"></div>
+        </form>
+
+        <h2>Insert a Chat Message</h2>
+        <form id="insertChatForm">
+
+            <label for="chatIDM">Chat ID:</label>
+            <input type="number" id="chatIDM" placeholder="Enter Chat ID" required />
+            <br /><br />
+
+            <label for="message">Message:</label>
+            <input type="text" id="message" placeholder="Enter your message" required />
+            <br /><br />
+
+            <label for="playerColorChat">Player Color:</label>
+            <input type="text" id="playerColorChat" placeholder="Enter player color" required />
+            <br /><br />
+
+            <button type="submit">Insert Message</button>
+        </form>
+        <div id="insertChatResult"></div>
+
+        
+    </div>
+
+    <script src="chat.js"></script>
+</body>
+<footer><p>Among Us Database</p></footer>
+</html>

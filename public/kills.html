@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Among Us Database - Kills</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- nav bar -->
+    <div class="navbar">
+        <div class="logo-container">
+            <img src="./amongus_icon.png" alt="Among Us Icon">
+            <span class="logo-text">Among Us <span class="database-text">Database</span></span>
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="player.html">Player</a></li>
+            <li><a href="task.html">Task</a></li>
+            <li><a href="chat.html">Chat</a></li>
+            <li><a href="kills.html">Kills</a></li>
+        </ul>
+    </div>
+
+    <div class="content">
+        <h1>Kills</h1>
+
+        <table id="killsTable">
+            <thead>
+                <tr>
+                    <th>Impostor</th>
+                    <th>Crewmate</th>
+                    <th>Time</th>
+                    <th>Room</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+        <button id="fetchKills">Find Kills</button>
+
+        <h2>Check Impostor Kills</h2>
+        <form id="impostorKillForm">
+            <label for="impostorKillColor">Enter Impostor Color:</label>
+            <input type="text" id="impostorKillColor" placeholder="e.g., Red" required>
+            <button type="submit">Check Impostor</button>
+        </form>
+        <div id="impostorKillsResult"></div>
+
+        <h2>Top Impostors</h2>
+        <table id="topImpostorsTable" border="1">
+            <thead>
+                <tr>
+                    <th>Impostor Color</th>
+                    <th>Kill Count</th>
+                </tr>
+            </thead>
+            <tbody>
+
+            </tbody>
+        </table>
+        <button id="fetchTopImpostors">Find Top Impostors</button>
+
+        <div class="data-section">
+            <h2>Players Voted Against in ALL Meetings</h2>
+            <table id="playersAllTasksTable" class="data-table">
+                <thead>
+                    <tr>
+                        <th>Player Color</th>
+                        <th>Player Name</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+            <button id="playersAllTasks" class="fetch-button">Check Players</button>
+        </div>
+    </div>
+
+    <script src="kills.js"></script>
+</body>
+<footer><p>Among Us Database</p></footer>
+</html>
