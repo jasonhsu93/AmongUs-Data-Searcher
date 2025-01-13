@@ -5,5 +5,3 @@ This project involves developing a database for an online multiplayer game based
 Video Demo: https://drive.google.com/file/d/1CdElc5I6TV4Dl2wkEI_pdeS23c8t8Sgt/view?usp=sharing
 
 ./remote-start.sh to start server
-sqlplus ora_cwl@stu for server
-password is a**sid here**
